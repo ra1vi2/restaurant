@@ -1,9 +1,37 @@
 <mvc:View controllerName="zy_ss22_421restaurant.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true" xmlns="sap.m">
-	<App>
+	displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+	<App id="app">
 		<pages>
 			<Page title="{i18n>title}">
-				<content></content>
+				<content>
+					<FlexBox id="idFlexBox" height="100px" alignItems="Center" justifyContent="Center">
+						<RadioButtonGroup id="idHeaderRadioGroup" select="onSelectHeaderRadioButton" columns="2">
+							<RadioButton id="idRadioButtonCreate" text="User" class="sapUiLargeMarginEnd"></RadioButton>
+							<RadioButton id="idRadioButtonEdit" text="Restaurant Admin" class="sapUiLargeMarginBegin"></RadioButton>
+						</RadioButtonGroup>
+					</FlexBox>
+					<f:SimpleForm id="idQutationsMainForm" layout="ResponsiveLayout" columnsL="2" columnsM="2" singleContainerFullSize="false" editable="true">
+						<f:content>
+							<core:Title id="idTitleCreate" text=""/>
+							<Label  ></Label>
+							<Button text="Book A Table" type="Accept" enabled="{this>/IsUser}"/>
+							
+							<core:Title id="idTitleEdit" text=""/>
+							
+							<Label  ></Label>
+							<Button text="Add New Table" enabled="{=! ${this>/IsUser}}" press="onAddNewTable"/>
+							
+							<Label ></Label>
+							<Button text="Remove a Table" type="Reject" enabled="{=! ${this>/IsUser}}"/>
+							
+							<Label ></Label>
+							<Button text="Edit Table Type" enabled="{=! ${this>/IsUser}}"/>
+							
+							<Label ></Label>
+							<Button text="Delete Bookings" type="Reject" enabled="{=! ${this>/IsUser}}"/>
+						</f:content>
+					</f:SimpleForm>
+				</content>
 			</Page>
 		</pages>
 	</App>

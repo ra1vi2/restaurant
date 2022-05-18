@@ -1,0 +1,25 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="zy_ss22_421restaurant.controller.AddTable"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form">
+	<App id="app">
+		<pages>
+			<Page title="Add New Table"  showNavButton="true" navButtonPress="onNavBack">
+				<content>
+					<f:SimpleForm id="idQutationsMainForm" layout="ResponsiveLayout" columnsL="2" columnsM="2" singleContainerFullSize="false" editable="true">
+						<f:content>
+							<core:Title id="idTitleCreate" text=""/>
+							<Label text="Table ID"></Label>
+							<Input value="{NewTable>/TableID}"/>
+							<Label text="Table Description"></Label>
+							<Input value="{NewTable>/TableDescription}"/>
+							<Label text="Table Capacity"></Label>
+							<Input value="{NewTable>/TableCapacity}"/>
+							<Label text=""></Label>
+							<Button text="Save" press="onSaveNewTablePress" type="Accept" width="40%"/>
+							<Button text="Cancel" type="Reject" width="40%"/>
+						</f:content>
+					</f:SimpleForm>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

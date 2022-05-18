@@ -90,6 +90,39 @@
 			"css": [{
 				"uri": "css/style.css"
 			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "zy_ss22_421restaurant.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [{
+				"name": "MainView",
+				"pattern": "",
+				"target": ["MainView"]
+			},{
+				"name": "AddTable",
+				"pattern": "AddTable",
+				"target": ["AddTable"]
+			}],
+			"targets": {
+				"MainView": {
+					"viewType": "XML",
+					"transition": "slide",
+					"viewName": "View1"
+				},
+				"AddTable": {
+					"viewType": "XML",
+					"transition": "slide",
+					"viewId": "AddTable",
+					"viewName": "AddTable"
+				}
+			}
 		}
 	}
 }
