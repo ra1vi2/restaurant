@@ -13,20 +13,41 @@
 					<f:SimpleForm id="idQutationsMainForm" layout="ResponsiveLayout" columnsL="2" columnsM="2" singleContainerFullSize="false" editable="true">
 						<f:content>
 							<core:Title id="idTitleCreate" text=""/>
-							<Label  ></Label>
-							<Button text="Book A Table" type="Accept" enabled="{this>/IsUser}"/>
+							<Label ></Label>
+							<Button text="Book A Table" type="Accept" enabled="{this>/IsUser}" press="onStartBooking"/>
+							
+							<Label text="Date"></Label>
+							<Text id="todayDate" text=""  visible="{this>/IsBookingFieldVisible}"/>
+							
+							<Label text="Select Time"></Label>
+							<TimePicker id="TP1" value="{booking>/ReserveTime}" valueFormat="HH:mm" displayFormat="HH:mm" visible="{this>/IsBookingFieldVisible}" />
+							
+							<Label text="Number of guests"></Label>
+							<Select selectedKey="{booking>/TableCapacity}" visible="{this>/IsBookingFieldVisible}">
+								<core:Item key="1" text="1" ></core:Item>
+								<core:Item key="2" text="2"></core:Item>
+								<core:Item key="3" text="3"></core:Item>
+								<core:Item key="4" text="4"></core:Item>
+								<core:Item key="5" text="5"></core:Item>
+								<core:Item key="6" text="6"></core:Item>
+								<core:Item key="7" text="7"></core:Item>
+							</Select>
+								
+							
+							<Label text="Special Requests"></Label>
+							<TextArea value="{booking>/SpecialRequests}"  visible="{this>/IsBookingFieldVisible}"/>
+							
+							<Label text=""></Label>
+							<CheckBox text="Parking Needed?" visible="{this>/IsBookingFieldVisible}"/>
+							<Button press="onConfrimBooking" type="Accept" text="Confirm Booking" visible="{this>/IsBookingFieldVisible}"/>
 							
 							<core:Title id="idTitleEdit" text=""/>
-							
-							<Label  ></Label>
+							<Label ></Label>
 							<Button text="Add New Table" enabled="{=! ${this>/IsUser}}" press="onAddNewTable"/>
-							
 							<Label ></Label>
 							<Button text="Remove a Table" type="Reject" enabled="{=! ${this>/IsUser}}"/>
-							
 							<Label ></Label>
 							<Button text="Edit Table Type" enabled="{=! ${this>/IsUser}}"/>
-							
 							<Label ></Label>
 							<Button text="Delete Bookings" type="Reject" enabled="{=! ${this>/IsUser}}"/>
 						</f:content>

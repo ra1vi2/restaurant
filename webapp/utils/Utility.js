@@ -1,6 +1,5 @@
- sap.ui.define([
- 	"sap/base/util/merge"
- ], function(merge) {
+sap.ui.define([
+ ], function() {
  	"use strict";
  	return {
  		odataRead: function(oModel, sPath, mParameters) {

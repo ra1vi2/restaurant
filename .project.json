@@ -45,5 +45,12 @@
     "targetFolder": "dist",
     "excludedFolders": [],
     "excludedFiles": []
+  },
+  "mockpreview": {
+    "mockUri": "/sap/opu/odata/sap/ZY_SS22_421_RESTAURANT_SRV/",
+    "metadataFilePath": "localService/metadata.xml",
+    "mockRequestsFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false
   }
 }
