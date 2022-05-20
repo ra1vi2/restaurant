@@ -109,6 +109,10 @@
 				"name": "AddTable",
 				"pattern": "AddTable",
 				"target": ["AddTable"]
+			},{
+				"name": "TableDetails",
+				"pattern": "TableDetails",
+				"target": ["TableDetails"]
 			}],
 			"targets": {
 				"MainView": {
@@ -121,6 +125,12 @@
 					"transition": "slide",
 					"viewId": "AddTable",
 					"viewName": "AddTable"
+				},
+				"TableDetails": {
+					"viewType": "XML",
+					"transition": "slide",
+					"viewId": "TableDetails",
+					"viewName": "TableDetails"
 				}
 			}
 		}

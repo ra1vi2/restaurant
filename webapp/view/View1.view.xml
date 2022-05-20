@@ -20,7 +20,8 @@
 							<Text id="todayDate" text=""  visible="{this>/IsBookingFieldVisible}"/>
 							
 							<Label text="Select Time"></Label>
-							<TimePicker id="TP1" value="{booking>/ReserveTime}" valueFormat="HH:mm" displayFormat="HH:mm" visible="{this>/IsBookingFieldVisible}" />
+							<TimePicker id="TP1" 
+							value="{ path: 'booking>/ReserveTime', type: 'sap.ui.model.odata.type.Time'}" valueFormat="HH:mm" displayFormat="HH:mm" visible="{this>/IsBookingFieldVisible}" />
 							
 							<Label text="Number of guests"></Label>
 							<Select selectedKey="{booking>/TableCapacity}" visible="{this>/IsBookingFieldVisible}">
@@ -45,9 +46,9 @@
 							<Label ></Label>
 							<Button text="Add New Table" enabled="{=! ${this>/IsUser}}" press="onAddNewTable"/>
 							<Label ></Label>
-							<Button text="Remove a Table" type="Reject" enabled="{=! ${this>/IsUser}}"/>
+							<Button text="Remove a Table" type="Reject" enabled="{=! ${this>/IsUser}}" press="onTableDetails"/>
 							<Label ></Label>
-							<Button text="Edit Table Type" enabled="{=! ${this>/IsUser}}"/>
+							<Button text="Edit Table Type" enabled="{=! ${this>/IsUser}}" press="onTableDetails"/>
 							<Label ></Label>
 							<Button text="Delete Bookings" type="Reject" enabled="{=! ${this>/IsUser}}"/>
 						</f:content>

@@ -1,0 +1,42 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.table" xmlns:m="sap.m"
+	controllerName="zy_ss22_421restaurant.controller.TableDetails" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Tables" showNavButton="true" navButtonPress="onNavBack">
+				<content>
+					<Table id="idTable" rows="{TableDetails>/}" selectionMode="Single">
+						<extension>
+							<m:OverflowToolbar>
+								<m:Title id="title" text="Table Details" level="H2"/>
+								<Button id="idTableSaveButton" text="Edit" icon="sap-icon://save" press="onSaveTable"/>
+								<m:ToolbarSpacer/>
+								<Button id="idTableEditButton" text="Edit" icon="sap-icon://edit" press="onEditTable"/>
+								<Button id="idTableDeleteButton" text="Delete" icon="sap-icon://delete" press="onDeleteTableItem"/>
+							</m:OverflowToolbar>
+						</extension>
+						<columns>
+							<Column width="4rem">
+								<m:Label text="Table ID" tooltip="Table ID"/>
+								<template>
+									<m:Input value="{TableDetails>TableID}" enabled="{this>/IsItemEditable}"/>
+								</template>
+							</Column>
+							<Column width="4rem">
+								<m:Label text="Table Description" tooltip="Table Description"/>
+								<template>
+									<m:Input value="{TableDetails>TableDescription}" enabled="{this>/IsItemEditable}"/>
+								</template>
+							</Column>
+							<Column width="4rem">
+								<m:Label text="Table Capacity" tooltip="Table Capacity"/>
+								<template>
+									<m:Input value="{TableDetails>TableCapacity}" type="Number" enabled="{this>/IsItemEditable}"/>
+								</template>
+							</Column>
+						</columns>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

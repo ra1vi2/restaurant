@@ -7,8 +7,11 @@ sap.ui.define([
 ], function(Utility, JSONModel, Filter, FilterOperator, Fragment) {
 	"use strict";
 	return {
-		submitData: function(oModel, aData) {
-			return Utility.odataCreate(oModel, "/ReservationSet", aData);
+		submitData: function(oModel, sPath, aData) {
+			return Utility.odataCreate(oModel, sPath, aData);
+		},
+		readData: function(oModel, sPath, aParameters) {
+			return Utility.odataRead(oModel, sPath, aParameters);
 		}
 	};
 });
