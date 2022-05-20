@@ -50,7 +50,7 @@
 							<Label ></Label>
 							<Button text="Edit Table Type" enabled="{=! ${this>/IsUser}}" press="onTableDetails"/>
 							<Label ></Label>
-							<Button text="Delete Bookings" type="Reject" enabled="{=! ${this>/IsUser}}"/>
+							<Button text="Bookings Details" type="Reject" enabled="{=! ${this>/IsUser}}" press="onPressBookingDetails"/>
 						</f:content>
 					</f:SimpleForm>
 				</content>

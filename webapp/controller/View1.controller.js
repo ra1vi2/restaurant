@@ -65,6 +65,9 @@ sap.ui.define([
 		},
 		onTableDetails: function() {
 			this.getOwnerComponent().getRouter().navTo("TableDetails");
+		},
+		onPressBookingDetails: function() {
+			this.getOwnerComponent().getRouter().navTo("BookingDetails");
 		}
 
 	});

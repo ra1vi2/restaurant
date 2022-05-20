@@ -1,39 +1,39 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.table" xmlns:m="sap.m"
 	controllerName="zy_ss22_421restaurant.controller.BookingDetails" xmlns:html="http://www.w3.org/1999/xhtml">
-	<App>
-		<pages>
-			<Page title="Booking Details"  showNavButton="true" navButtonPress="onNavBack">
-				<content>
+	<m:App>
+		<m:pages>
+			<m:Page title="Booking Details"  showNavButton="true" navButtonPress="onNavBack">
+				<m:content>
 					<Table id="idBookings" rows="{BookingDetails>/}" selectionMode="Single">
 						<extension>
 							<m:OverflowToolbar>
 								<m:Title id="title" text="Booking Details" level="H2"/>
-								<Button id="idBookingSaveButton" text="Edit" icon="sap-icon://save" press="onSaveBooking"/>
+								<m:Button id="idBookingSaveButton" text="Save" icon="sap-icon://save" press="onSaveBooking"/>
 								<m:ToolbarSpacer/>
-								<Button id="idBookingEditButton" text="Edit" icon="sap-icon://edit" press="onEditBooking"/>
-								<Button id="idBookingDeleteButton" text="Delete" icon="sap-icon://delete" press="onDeleteBookingItem"/>
+								<m:Button id="idBookingEditButton" text="Edit" icon="sap-icon://edit" press="onEditBooking"/>
+								<m:Button id="idBookingDeleteButton" text="Delete" icon="sap-icon://delete" press="onDeleteBookingItem"/>
 							</m:OverflowToolbar>
 						</extension>
 						<columns>
-							<Column width="4rem">
+							<Column>
 								<m:Label text="Table ID" tooltip="Booking ID"/>
 								<template>
 									<m:Input value="{BookingDetails>TableID}" enabled="{this>/IsItemEdiBooking}"/>
 								</template>
 							</Column>
-							<Column width="4rem">
+							<Column >
 								<m:Label text="Reservation Time" tooltip="Booking Description"/>
 								<template>
 									<m:Input value="{ path: 'BookingDetails>/ReserveTime', type: 'sap.ui.model.odata.type.Time'}" enabled="{this>/IsItemEdiBooking}"/>
 								</template>
 							</Column>
-							<Column width="4rem">
+							<Column >
 								<m:Label text="No of Guests" tooltip="Booking Capacity"/>
 								<template>
 									<m:Input value="{BookingDetails>TableCapacity}" type="Number" enabled="{this>/IsItemEdiBooking}"/>
 								</template>
 							</Column>
-							<Column width="8rem">
+							<Column >
 								<m:Label text="Special Requests" tooltip="Special Requests"/>
 								<template>
 									<m:Input value="{BookingDetails>SpecialRequests}" enabled="{this>/IsItemEdiBooking}"/>
@@ -41,8 +41,8 @@
 							</Column>
 						</columns>
 					</Table>	
-				</content>
-			</Page>
-		</pages>
-	</App>
+				</m:content>
+			</m:Page>
+		</m:pages>
+	</m:App>
 </mvc:View>

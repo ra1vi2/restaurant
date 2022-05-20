@@ -105,14 +105,18 @@
 				"name": "MainView",
 				"pattern": "",
 				"target": ["MainView"]
-			},{
+			}, {
 				"name": "AddTable",
 				"pattern": "AddTable",
 				"target": ["AddTable"]
-			},{
+			}, {
 				"name": "TableDetails",
 				"pattern": "TableDetails",
 				"target": ["TableDetails"]
+			}, {
+				"name": "BookingDetails",
+				"pattern": "BookingDetails",
+				"target": ["BookingDetails"]
 			}],
 			"targets": {
 				"MainView": {
@@ -131,6 +135,12 @@
 					"transition": "slide",
 					"viewId": "TableDetails",
 					"viewName": "TableDetails"
+				},
+				"BookingDetails": {
+					"viewType": "XML",
+					"transition": "slide",
+					"viewId": "BookingDetails",
+					"viewName": "BookingDetails"
 				}
 			}
 		}

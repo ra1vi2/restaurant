@@ -20,7 +20,7 @@ sap.ui.define([
 			this.getView().getModel("this").setProperty("/IsItemEditable", false);
 			this.getOwnerComponent()
 				.getRouter()
-				.getRoute("IsItemEdiBooking")
+				.getRoute("BookingDetails")
 				.attachPatternMatched(this._onPatternMatchedDetail, this);
 		},
 		_onPatternMatchedDetail: function() {
